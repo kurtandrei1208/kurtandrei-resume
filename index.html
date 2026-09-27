@@ -5,34 +5,425 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kurt Andrei Mian | Customer Support & Virtual Assistant</title>
   <meta name="description" content="Portfolio website for Kurt Andrei Mian, customer support specialist and virtual assistant." />
+  <!-- Google Analytics: replace G-XXXXXXXXXX with your GA4 measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} 
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root{--bg:#0a0d14;--bg-soft:#101720;--line:rgba(148,163,184,.2);--line-strong:rgba(148,163,184,.35);--ink:#edf3ff;--ink-soft:#b8c4d8;--ink-muted:#8fa0bb;--cyan:#5fd4e0;--violet:#8b7cf6;--amber:#fbbf24;--grad:linear-gradient(90deg,var(--cyan),var(--violet));--shadow:0 20px 45px rgba(0,0,0,.25);--radius:18px;--max:1100px}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at top left,rgba(95,212,224,.12),transparent 28%),radial-gradient(circle at top right,rgba(139,124,246,.12),transparent 35%),linear-gradient(180deg,#0a0d14 0%,#0d1119 100%);color:var(--ink);font-family:Inter,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}.container{width:min(var(--max),calc(100% - 2rem));margin:0 auto}.site-header{position:sticky;top:0;z-index:20;backdrop-filter:blur(12px);background:rgba(10,13,20,.52);border-bottom:1px solid var(--line)}.nav{display:flex;align-items:center;justify-content:space-between;min-height:70px;gap:1rem}.brand,h1,.section-title,.job-title,.edu-name,.eyebrow,.section-num,.skill-group h3{font-family:"Space Grotesk",sans-serif}.brand{font-size:1rem;letter-spacing:.08em;text-transform:uppercase;font-weight:700}.nav-links{display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap}.nav-links a{color:var(--ink-soft);font-size:.92rem;transition:color .2s ease}.nav-links a:hover{color:var(--cyan)}.cta{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:.8rem 1.2rem;background:var(--grad);color:#081018;font-weight:700;border-radius:12px;box-shadow:var(--shadow);transition:transform .2s ease,filter .2s ease}.cta:hover{transform:translateY(-2px);filter:brightness(1.08)}.hero{padding:5rem 0 3rem}.hero-shell{display:grid;grid-template-columns:1.3fr .7fr;align-items:center;gap:2.5rem}.eyebrow{display:inline-block;letter-spacing:.12em;font-size:.76rem;color:var(--cyan);text-transform:uppercase;margin-bottom:1rem;font-weight:600}h1{margin:0;font-size:clamp(2.6rem,6vw,5rem);line-height:1.02;letter-spacing:-.05em;font-weight:700}.lead{margin-top:1.2rem;max-width:58ch;color:var(--ink-soft);font-size:1.08rem}.hero-actions{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2rem}.ghost{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:.8rem 1.2rem;border:1px solid var(--line-strong);border-radius:12px;color:var(--ink);background:rgba(255,255,255,.02)}.hero-meta{display:flex;flex-wrap:wrap;gap:1.2rem 2rem;margin-top:2rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--ink-soft);font-size:.92rem}.hero-meta strong{color:var(--ink);display:block;font-weight:700;margin-bottom:.2rem}.profile-card{position:relative;background:linear-gradient(180deg,rgba(122,96,250,.18),rgba(18,25,35,.2));border:1px solid var(--line);border-radius:24px;padding:1.1rem;box-shadow:var(--shadow)}.avatar{width:min(100%,330px);aspect-ratio:1;border-radius:24px;margin:0 auto;background:linear-gradient(160deg,#0f1726,#1b222e);border:1px solid rgba(255,255,255,.08);display:grid;place-items:center;position:relative;overflow:hidden}.avatar img{width:100%;height:100%;object-fit:cover;object-position:center top}.badge{position:absolute;right:18px;bottom:18px;background:rgba(8,15,24,.85);border:1px solid var(--line);color:var(--ink-soft);border-radius:999px;padding:.45rem .8rem;font-size:.8rem;letter-spacing:.04em}.section{padding:2rem 0 .5rem}.section-head{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem}.section-num{color:var(--ink-muted);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700}.section-title{display:flex;align-items:center;margin:0;color:var(--ink);font-size:clamp(1.5rem,3vw,2rem);letter-spacing:-.04em;flex:1}.section-line{flex:1;height:1px;background:linear-gradient(90deg,rgba(148,163,184,.35),rgba(148,163,184,.05))}.about{color:var(--ink-soft);font-size:1.02rem;max-width:70ch}.experience{display:grid;gap:1.4rem}.job,.skill-group{background:rgba(15,23,32,.75);border:1px solid var(--line);border-radius:var(--radius);padding:1.4rem 1.4rem 1.2rem;box-shadow:var(--shadow)}.job-head{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;align-items:center;margin-bottom:.5rem}.job-title{font-size:1.1rem;font-weight:700}.job-date{color:var(--ink-muted);font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;font-weight:700}.company{color:#b69bff;font-weight:600;margin-bottom:.7rem}.job ul{margin:0;padding-left:1.1rem;color:var(--ink-soft)}.job li{margin-bottom:.45rem}.skills-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.3rem}.skill-group{padding:1.1rem 1rem}.skill-group h3{margin:0 0 .8rem;font-size:.78rem;letter-spacing:.12em;color:var(--ink-muted);text-transform:uppercase}.tag-row{display:flex;flex-wrap:wrap;gap:.6rem}.tag{display:inline-flex;align-items:center;gap:.5rem;background:rgba(255,255,255,.02);border:1px solid var(--line-strong);border-radius:10px;padding:.5rem .72rem;color:var(--ink-soft);font-size:.85rem}.spark{width:.9rem;height:.9rem;flex:0 0 auto;fill:currentColor;color:var(--amber)}.edu-list{display:grid;gap:1rem}.edu{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;border-bottom:1px solid var(--line);padding-bottom:1rem}.edu:last-child{border-bottom:none;padding-bottom:0}.edu-name{font-weight:700;color:var(--ink);margin-bottom:.1rem}.edu-school{color:var(--ink-soft)}.edu-date{color:var(--ink-muted);white-space:nowrap;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;font-weight:700}.footer{border-top:1px solid var(--line);margin-top:3rem;padding:2rem 0 3rem}.footer-shell{display:flex;justify-content:space-between;gap:1rem;align-items:center;flex-wrap:wrap}.footer p{margin:0;color:var(--ink-soft)}
+    :root{
+      --bg: #f7fafc; /* much lighter background */
+      --bg-soft: #ffffff;
+      --panel: #ffffff;
+      --line: rgba(15, 23, 42, 0.06);
+      --line-strong: rgba(15, 23, 42, 0.10);
+      --ink: #0b1220;
+      --ink-soft: #475569;
+      --ink-muted: #6b7280;
+      --accent-a: #06b6d4; /* cyan */
+      --accent-b: #6366f1; /* indigo */
+      --accent-c: #f59e0b; /* amber */
+      --grad: linear-gradient(90deg, var(--accent-a), var(--accent-b));
+      --btn-active-grad: linear-gradient(90deg,#60a5fa,#a78bfa);
+      --shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
+      --radius: 16px;
+      --max: 1100px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background: linear-gradient(180deg, #f7fafc 0%, #eef2f7 100%);
+      color:var(--ink);
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+
+    .container{width:min(var(--max),calc(100% - 2rem));margin:0 auto}
+
+    .site-header{position:sticky;top:0;z-index:20;backdrop-filter:blur(8px);background:rgba(255,255,255,0.8);border-bottom:1px solid var(--line)}
+
+    .nav{display:flex;align-items:center;justify-content:space-between;min-height:70px;gap:1rem}
+
+    .brand{font-family:"Space Grotesk",sans-serif;font-size:1rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);font-weight:700}
+
+    .nav-links{display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap}
+
+    .nav-links a{color:var(--ink-soft);font-size:.92rem;transition:color .18s ease}
+    .nav-links a:hover{color:var(--accent-b)}
+
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:46px;padding:.6rem 1rem;border-radius:12px;border:1px solid transparent;font-weight:700;cursor:pointer;position:relative;overflow:hidden}
+    .btn:focus{outline:2px solid rgba(99,102,241,0.18);outline-offset:3px}
+
+    .cta{background:var(--grad);color:#fff}
+    .cta:hover{filter:brightness(.98);transform:translateY(-2px)}
+
+    .ghost{background:transparent;border:1px solid var(--line-strong);color:var(--ink)}
+
+    /* Button active styles (toggled after click) */
+    .btn.active{background:var(--btn-active-grad);color:#081018}
+
+    /* Bubble effect */
+    .bubble{
+      position:absolute;border-radius:50%;transform:translate(-50%, -50%);pointer-events:none;opacity:0.9;mix-blend-mode:multiply;
+      animation:bubble-pop 700ms cubic-bezier(.2,.9,.2,1);
+    }
+
+    @keyframes bubble-pop{
+      0%{transform:translate(-50%,-50%) scale(0.15);opacity:0.95}
+      60%{transform:translate(-50%,-50%) scale(1);opacity:0.85}
+      100%{transform:translate(-50%,-50%) scale(1.6);opacity:0}
+    }
+
+    .hero{padding:4.5rem 0 2rem}
+    .hero-shell{display:grid;grid-template-columns:1.3fr .7fr;align-items:center;gap:2.2rem}
+
+    .eyebrow{display:inline-block;letter-spacing:.12em;font-size:.76rem;color:var(--accent-a);text-transform:uppercase;margin-bottom:1rem;font-weight:600}
+    h1{margin:0;font-family:"Space Grotesk",sans-serif;font-size:clamp(2.2rem,6vw,4.4rem);line-height:1.02;letter-spacing:-.02em;font-weight:700}
+    .lead{margin-top:1rem;max-width:58ch;color:var(--ink-soft);font-size:1.02rem}
+
+    .hero-actions{display:flex;flex-wrap:wrap;gap:1rem;margin-top:1.4rem}
+
+    .hero-meta{display:flex;flex-wrap:wrap;gap:1rem 2rem;margin-top:1.6rem;padding-top:1.1rem;border-top:1px solid var(--line);color:var(--ink-soft);font-size:.92rem}
+    .hero-meta strong{color:var(--ink);display:block;font-weight:700;margin-bottom:.2rem}
+
+    .profile-card{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:1rem;box-shadow:var(--shadow)}
+    .avatar{width:min(100%,320px);aspect-ratio:1;border-radius:14px;margin:0 auto;background:linear-gradient(180deg,#f8fafc,#ffffff);border:1px solid rgba(10,10,10,0.03);display:grid;place-items:center;position:relative;overflow:hidden}
+    .avatar img{width:100%;height:100%;object-fit:cover;object-position:center top}
+    .badge{position:absolute;right:12px;bottom:12px;background:#fff;border:1px solid var(--line);color:var(--ink-soft);border-radius:999px;padding:.35rem .7rem;font-size:.82rem}
+
+    .section{padding:2rem 0 .5rem}
+    .section-head{display:flex;align-items:center;gap:1rem;margin-bottom:1.2rem}
+    .section-num{color:var(--ink-muted);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700}
+    .section-title{display:flex;align-items:center;margin:0;color:var(--ink);font-size:clamp(1.2rem,3vw,1.6rem);letter-spacing:-.02em;flex:1}
+    .section-line{flex:1;height:1px;background:linear-gradient(90deg,rgba(99,102,241,.18),rgba(99,102,241,.03))}
+
+    .job,.skill-group{background:#fff;border:1px solid var(--line);border-radius:12px;padding:1rem;box-shadow:var(--shadow)}
+    .job-head{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;align-items:center;margin-bottom:.5rem}
+    .job-title{font-family:"Space Grotesk",sans-serif;font-size:1.02rem;font-weight:700}
+    .job-date{color:var(--ink-muted);font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;font-weight:700}
+    .company{color:var(--accent-b);font-weight:700;margin-bottom:.6rem}
+    .job ul{margin:0;padding-left:1.05rem;color:var(--ink-soft)}
+
+    .skills-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+    .skill-group h3{margin:0 0 .6rem;font-size:.78rem;letter-spacing:.12em;color:var(--ink-muted);text-transform:uppercase}
+    .tag-row{display:flex;flex-wrap:wrap;gap:.6rem}
+    .tag{display:inline-flex;align-items:center;gap:.45rem;background:transparent;border:1px solid var(--line-strong);border-radius:10px;padding:.4rem .6rem;color:var(--ink-soft);font-size:.86rem}
+
+    .edu-list{display:grid;gap:1rem}
+    .edu{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;border-bottom:1px solid var(--line);padding-bottom:1rem}
+    .edu:last-child{border-bottom:none;padding-bottom:0}
+    .edu-name{font-weight:700;color:var(--ink);margin-bottom:.1rem}
+    .edu-school{color:var(--ink-soft)}
+    .edu-date{color:var(--ink-muted);white-space:nowrap;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;font-weight:700}
+
+    .footer{border-top:1px solid var(--line);margin-top:2.8rem;padding:1.8rem 0 2.6rem}
+    .footer-shell{display:flex;justify-content:space-between;gap:1rem;align-items:center;flex-wrap:wrap}
+    .footer p{margin:0;color:var(--ink-soft)}
+
     @media(max-width:820px){.hero-shell{grid-template-columns:1fr}.skills-grid{grid-template-columns:1fr}.nav{flex-wrap:wrap;padding:1rem 0}}
-    @media(max-width:560px){.nav-links{width:100%;justify-content:space-between}.hero{padding-top:3.3rem}.job-head,.edu{flex-direction:column;align-items:flex-start}.cta,.ghost{width:100%}.hero-actions{flex-direction:column}}
+    @media(max-width:560px){.nav-links{width:100%;justify-content:space-between}.hero{padding-top:3rem}.job-head,.edu{flex-direction:column;align-items:flex-start}.btn{width:100%}.hero-actions{flex-direction:column}}
   </style>
 </head>
 <body>
-  <header class="site-header"><div class="container nav"><div class="brand">Kurt Andrei Mian</div><nav class="nav-links" aria-label="Main navigation"><a href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="https://wa.me/639494022044" target="_blank" rel="noopener" class="cta">Contact</a></nav></div></header>
+  <header class="site-header">
+    <div class="container nav">
+      <div class="brand">Kurt Andrei Mian</div>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="https://wa.me/639494022044?text=Hello%20Kurt%2C%20I%27m%20interested%20in%20working%20with%20you." class="btn cta" target="_blank" rel="noopener">Contact</a>
+      </nav>
+    </div>
+  </header>
+
   <main>
-    <section class="hero"><div class="container hero-shell"><div><div class="eyebrow">Bacolod City • Philippines</div><h1>Kurt Andrei Mian</h1><p class="lead">Customer support specialist moving into virtual assistant and sales support work, with experience in technical troubleshooting, lead follow-up, and CRM management.</p><div class="hero-actions"><a class="cta" href="https://wa.me/639494022044" target="_blank" rel="noopener">Get in touch</a><a class="ghost" href="#experience">View experience</a></div><div class="hero-meta"><div><strong>Email</strong>kurtandrei2002@gmail.com</div><div><strong>Phone</strong>+63 949 4022 044</div><div><strong>LinkedIn</strong>linkedin.com/in/kurt-andreimian</div></div></div><div class="profile-card"><div class="avatar"><img src="assets/IMG_0958.JPG" alt="Head-and-shoulders portrait of Kurt Andrei Mian"></div><div class="badge">Open to remote work</div></div></div></section>
-    <section id="about" class="section"><div class="container"><div class="section-head"><span class="section-num">01</span><h2 class="section-title">About</h2><span class="section-line"></span></div><p class="about">Two years handling high-volume calls and technical troubleshooting for Concentrix and IQOR, plus direct virtual assistant experience running CRM, scheduling, and lead follow-up for Bulletproof Cycling. Comfortable learning new tools quickly, staying organized under pressure, and keeping conversations calm and productive even when issues are stressful.</p></div></section>
-    <section id="experience" class="section"><div class="container"><div class="section-head"><span class="section-num">02</span><h2 class="section-title">Experience</h2><span class="section-line"></span></div><div class="experience">
-      <article class="job"><div class="job-head"><div class="job-title">Advisor II — Technical Solutions</div><div class="job-date">Aug 2024 – Jun 2026</div></div><div class="company">Concentrix, Comcast account</div><ul><li>Diagnosed and resolved internet, video, and voice service issues over the phone.</li><li>Spotted upgrade and retention opportunities during support calls.</li><li>Logged every case in the CRM for continuity and accurate hand-off.</li></ul></article>
-      <article class="job"><div class="job-head"><div class="job-title">Virtual Assistant — Appointment Setter</div><div class="job-date">Sep 2025 – May 2026</div></div><div class="company">Bulletproof Cycling</div><ul><li>Qualified inbound and outbound leads by call, email, and message to book appointments.</li><li>Ran structured follow-up sequences to re-engage warm and cold leads.</li><li>Kept CRM records and scheduling calendars accurate to avoid double-bookings.</li></ul></article>
-      <article class="job"><div class="job-head"><div class="job-title">Customer Service Representative</div><div class="job-date">Mar 2023 – May 2024</div></div><div class="company">IQOR</div><ul><li>Resolved a high volume of customer inquiries with empathetic, direct communication.</li><li>Documented every interaction in a specialized CRM for prompt follow-up.</li><li>Helped onboard and train new team members on service protocols.</li></ul></article>
-    </div></div></section>
-    <section id="skills" class="section"><div class="container"><div class="section-head"><span class="section-num">03</span><h2 class="section-title">Skills</h2><span class="section-line"></span></div><div class="skills-grid">
-      <div class="skill-group"><h3>Support &amp; Sales</h3><div class="tag-row"><span class="tag">★ Customer service</span><span class="tag">★ Appointment setting</span><span class="tag">★ Lead follow-up</span><span class="tag">★ Technical troubleshooting</span></div></div>
-      <div class="skill-group"><h3>Tools</h3><div class="tag-row"><span class="tag">★ CRM software</span><span class="tag">★ Scheduling tools</span><span class="tag">★ Microsoft Excel</span><span class="tag">★ Google Workspace</span></div></div>
-      <div class="skill-group"><h3>Programming</h3><div class="tag-row"><span class="tag">★ Python</span><span class="tag">★ Java</span><span class="tag">★ C++</span><span class="tag">★ HTML/CSS</span></div></div>
-      <div class="skill-group"><h3>Working Style</h3><div class="tag-row"><span class="tag">★ Active listening</span><span class="tag">★ Critical thinking</span><span class="tag">★ Time management</span><span class="tag">★ Team collaboration</span></div></div>
-    </div></div></section>
-    <section id="education" class="section"><div class="container"><div class="section-head"><span class="section-num">04</span><h2 class="section-title">Education</h2><span class="section-line"></span></div><div class="edu-list"><div class="edu"><div><div class="edu-name">Bachelor of Science in Computer Science</div><div class="edu-school">University of St. La Salle</div></div><div class="edu-date">2022 – 2025</div></div><div class="edu"><div><div class="edu-name">Senior High School</div><div class="edu-school">University of St. La Salle</div></div><div class="edu-date">2020 – 2022</div></div><div class="edu"><div><div class="edu-name">Basic Education</div><div class="edu-school">La Consolacion College</div></div><div class="edu-date">2015 – 2019</div></div></div></div></section>
+    <section class="hero">
+      <div class="container hero-shell">
+        <div>
+          <div class="eyebrow">Bacolod City • Philippines</div>
+          <h1>Kurt Andrei Mian</h1>
+          <p class="lead">
+            Customer support specialist moving into virtual assistant and sales support work, with experience in technical troubleshooting, lead follow-up, and CRM management.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn cta" href="https://wa.me/639494022044?text=Hello%20Kurt%2C%20I%27m%20interested%20in%20working%20with%20you." target="_blank" rel="noopener">Get in touch</a>
+            <!-- Replace the Calendly URL below with your own calendly link -->
+            <a class="btn ghost" href="https://calendly.com/yourname" target="_blank" rel="noopener">Book a call</a>
+            <!-- Add your PDF to assets/Kurt-Andrei-Mian-Resume.pdf -->
+            <a class="btn ghost" href="assets/Kurt-Andrei-Mian-Resume.pdf" download>Download resume</a>
+          </div>
+
+          <div class="hero-meta">
+            <div>
+              <strong>Email</strong>
+              kurtandrei2002@gmail.com
+            </div>
+            <div>
+              <strong>Phone</strong>
+              +63 949 4022 044
+            </div>
+            <div>
+              <strong>LinkedIn</strong>
+              linkedin.com/in/kurt-andreimian
+            </div>
+          </div>
+        </div>
+
+        <div class="profile-card">
+          <div class="avatar" aria-label="Profile avatar">
+            <img src="assets/IMG_0958.JPG" alt="Head-and-shoulders portrait of Kurt Andrei Mian">
+          </div>
+          <div class="badge">Open to remote work</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-num">01</span>
+          <h2 class="section-title">About</h2>
+          <span class="section-line"></span>
+        </div>
+        <p class="about">
+          Two years handling high-volume calls and technical troubleshooting for Concentrix and IQOR, plus direct virtual assistant experience running CRM, scheduling, and lead follow-up for Bulletproof Cycling. Comfortable learning new tools quickly, staying organized under pressure, and keeping conversations calm and productive even when issues are stressful.
+        </p>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-num">02</span>
+          <h2 class="section-title">Experience</h2>
+          <span class="section-line"></span>
+        </div>
+
+        <div class="experience">
+          <article class="job">
+            <div class="job-head">
+              <div class="job-title">Advisor II — Technical Solutions</div>
+              <div class="job-date">Aug 2024 – Jun 2026</div>
+            </div>
+            <div class="company">Concentrix, Comcast account</div>
+            <ul>
+              <li>Diagnosed and resolved internet, video, and voice service issues over the phone.</li>
+              <li>Spotted upgrade and retention opportunities during support calls.</li>
+              <li>Logged every case in the CRM for continuity and accurate hand-off.</li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <div class="job-head">
+              <div class="job-title">Virtual Assistant — Appointment Setter</div>
+              <div class="job-date">Sep 2025 – May 2026</div>
+            </div>
+            <div class="company">Bulletproof Cycling</div>
+            <ul>
+              <li>Qualified inbound and outbound leads by call, email, and message to book appointments.</li>
+              <li>Ran structured follow-up sequences to re-engage warm and cold leads.</li>
+              <li>Kept CRM records and scheduling calendars accurate to avoid double-bookings.</li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <div class="job-head">
+              <div class="job-title">Customer Service Representative</div>
+              <div class="job-date">Mar 2023 – May 2024</div>
+            </div>
+            <div class="company">IQOR</div>
+            <ul>
+              <li>Resolved a high volume of customer inquiries with empathetic, direct communication.</li>
+              <li>Documented every interaction in a specialized CRM for prompt follow-up.</li>
+              <li>Helped onboard and train new team members on service protocols.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-num">03</span>
+          <h2 class="section-title">Skills</h2>
+          <span class="section-line"></span>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h3>Support & Sales</h3>
+            <div class="tag-row">
+              <span class="tag">★ Customer service</span>
+              <span class="tag">★ Appointment setting</span>
+              <span class="tag">★ Lead follow-up</span>
+              <span class="tag">★ Technical troubleshooting</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h3>Tools</h3>
+            <div class="tag-row">
+              <span class="tag">★ CRM software</span>
+              <span class="tag">★ Scheduling tools</span>
+              <span class="tag">★ Microsoft Excel</span>
+              <span class="tag">★ Google Workspace</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h3>Programming</h3>
+            <div class="tag-row">
+              <span class="tag">★ Python</span>
+              <span class="tag">★ Java</span>
+              <span class="tag">★ C++</span>
+              <span class="tag">★ HTML/CSS</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h3>Working Style</h3>
+            <div class="tag-row">
+              <span class="tag">★ Active listening</span>
+              <span class="tag">★ Critical thinking</span>
+              <span class="tag">★ Time management</span>
+              <span class="tag">★ Team collaboration</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-num">04</span>
+          <h2 class="section-title">Education</h2>
+          <span class="section-line"></span>
+        </div>
+
+        <div class="edu-list">
+          <div class="edu">
+            <div>
+              <div class="edu-name">Bachelor of Science in Computer Science</div>
+              <div class="edu-school">University of St. La Salle</div>
+            </div>
+            <div class="edu-date">2022 – 2025</div>
+          </div>
+
+          <div class="edu">
+            <div>
+              <div class="edu-name">Senior High School</div>
+              <div class="edu-school">University of St. La Salle</div>
+            </div>
+            <div class="edu-date">2020 – 2022</div>
+          </div>
+
+          <div class="edu">
+            <div>
+              <div class="edu-name">Basic Education</div>
+              <div class="edu-school">La Consolacion College</div>
+            </div>
+            <div class="edu-date">2015 – 2019</div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer class="footer"><div class="container footer-shell"><p>Open to remote virtual assistant, customer support, and sales support roles.</p><a href="https://wa.me/639494022044" target="_blank" rel="noopener" class="cta">Get in touch</a></div></footer>
+
+  <footer class="footer">
+    <div class="container footer-shell">
+      <p>Open to remote virtual assistant, customer support, and sales support roles.</p>
+      <div style="display:flex;gap:0.75rem;align-items:center;flex-wrap:wrap">
+        <a class="btn ghost" href="assets/Kurt-Andrei-Mian-Resume.pdf" download>Download resume</a>
+        <a class="btn cta" href="https://wa.me/639494022044?text=Hello%20Kurt%2C%20I%27m%20interested%20in%20working%20with%20you." target="_blank" rel="noopener">Get in touch</a>
+        <a class="btn ghost" href="https://calendly.com/yourname" target="_blank" rel="noopener">Book a call</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Button bubble and color toggle animation
+    function createBubble(button, x, y, color){
+      const rect = button.getBoundingClientRect();
+      const bubble = document.createElement('span');
+      bubble.className = 'bubble';
+      bubble.style.left = (x - rect.left) + 'px';
+      bubble.style.top  = (y - rect.top) + 'px';
+      bubble.style.width = bubble.style.height = Math.max(rect.width, rect.height) * 0.9 + 'px';
+      bubble.style.background = color;
+      button.appendChild(bubble);
+      setTimeout(()=> bubble.remove(), 800);
+    }
+
+    function getButtonColor(btn){
+      // prioritize data-color attribute, otherwise use accent var
+      const data = btn.getAttribute('data-color');
+      if(data) return data;
+      // read computed value of --accent-a as fallback
+      const root = getComputedStyle(document.documentElement);
+      return root.getPropertyValue('--accent-a') || '#06b6d4';
+    }
+
+    document.querySelectorAll('.btn').forEach(btn => {
+      btn.addEventListener('click', function(e){
+        // create bubble at click
+        const color = getButtonColor(this).trim() || '#06b6d4';
+        createBubble(this, e.clientX, e.clientY, color);
+
+        // toggle active class briefly for color change on click (not persistent for navigation buttons)
+        if(!this.classList.contains('cta') || this.closest('a') === null){
+          // if it's not a CTA link (or it's a plain button), toggle
+          this.classList.toggle('active');
+          setTimeout(()=>this.classList.toggle('active'), 900);
+        } else {
+          // for links that navigate away, add a short active flash
+          this.classList.add('active');
+          setTimeout(()=>this.classList.remove('active'), 900);
+        }
+
+        // Google Analytics event tracking (if gtag is configured)
+        try{
+          const label = (this.textContent || this.innerText || 'button').trim();
+          if(typeof gtag === 'function'){
+            gtag('event', 'click', { 'event_category': 'engagement', 'event_label': label });
+          }
+        }catch(e){/* ignore */}
+      });
+
+      // keyboard accessibility: trigger bubble on Enter/Space
+      btn.addEventListener('keydown', function(e){
+        if(e.key === 'Enter' || e.key === ' '){
+          const rect = this.getBoundingClientRect();
+          const cx = rect.left + rect.width/2;
+          const cy = rect.top + rect.height/2;
+          const color = getButtonColor(this).trim() || '#06b6d4';
+          createBubble(this, cx, cy, color);
+          this.classList.add('active');
+          setTimeout(()=>this.classList.remove('active'),900);
+        }
+      });
+    });
+
+    // Small UX: when Calendly button is clicked, open in new tab (already set in markup).
+    // If you'd like an embedded Calendly widget instead, say so and I'll add the embed code.
+  </script>
 </body>
 </html>
