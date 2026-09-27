@@ -88,6 +88,9 @@
       100%{transform:translate(-50%,-50%) scale(1.6);opacity:0}
     }
 
+    /* allow nav links to host bubbles without layout shift */
+    .bubble-target{position:relative;display:inline-flex;padding:.25rem .45rem;border-radius:8px}
+
     .hero{padding:4.5rem 0 2rem}
     .hero-shell{display:grid;grid-template-columns:1.3fr .7fr;align-items:center;gap:2.2rem}
 
@@ -143,10 +146,10 @@
     <div class="container nav">
       <div class="brand">Kurt Andrei Mian</div>
       <nav class="nav-links" aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#education">Education</a>
+        <a class="bubble-target" href="#about">About</a>
+        <a class="bubble-target" href="#experience">Experience</a>
+        <a class="bubble-target" href="#skills">Skills</a>
+        <a class="bubble-target" href="#education">Education</a>
         <a href="https://wa.me/639494022044?text=Hello%20Kurt%2C%20I%27m%20interested%20in%20working%20with%20you." class="btn cta" target="_blank" rel="noopener">Contact</a>
       </nav>
     </div>
@@ -382,6 +385,7 @@
       return root.getPropertyValue('--accent-a') || '#06b6d4';
     }
 
+    // Existing .btn elements
     document.querySelectorAll('.btn').forEach(btn => {
       btn.addEventListener('click', function(e){
         // create bubble at click
@@ -422,8 +426,36 @@
       });
     });
 
-    // Small UX: when Calendly button is clicked, open in new tab (already set in markup).
-    // If you'd like an embedded Calendly widget instead, say so and I'll add the embed code.
+    // Add bubble behavior to nav links and other small targets
+    document.querySelectorAll('.bubble-target').forEach(el => {
+      // ensure positioned container
+      const current = getComputedStyle(el).position;
+      if(current === 'static') el.style.position = 'relative';
+
+      el.addEventListener('click', function(e){
+        const color = getButtonColor(this).trim() || 'rgba(99,102,241,0.12)';
+        createBubble(this, e.clientX, e.clientY, color);
+
+        // GA tracking for nav
+        try{
+          const label = (this.textContent || this.innerText || 'nav').trim();
+          if(typeof gtag === 'function'){
+            gtag('event', 'click', { 'event_category': 'navigation', 'event_label': label });
+          }
+        }catch(e){/* ignore */}
+      });
+
+      el.addEventListener('keydown', function(e){
+        if(e.key === 'Enter' || e.key === ' '){
+          const rect = this.getBoundingClientRect();
+          const cx = rect.left + rect.width/2;
+          const cy = rect.top + rect.height/2;
+          const color = getButtonColor(this).trim() || 'rgba(99,102,241,0.12)';
+          createBubble(this, cx, cy, color);
+        }
+      });
+    });
+
   </script>
 </body>
 </html>
