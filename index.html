@@ -19,7 +19,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg: #f7fafc; /* much lighter background */
+      --bg: #f7fafc;
       --bg-soft: #ffffff;
       --panel: #ffffff;
       --line: rgba(15, 23, 42, 0.06);
@@ -27,12 +27,13 @@
       --ink: #0b1220;
       --ink-soft: #475569;
       --ink-muted: #6b7280;
-      --accent-a: #06b6d4; /* cyan */
-      --accent-b: #6366f1; /* indigo */
-      --accent-c: #f59e0b; /* amber */
+      --accent-a: #06b6d4;
+      --accent-b: #6366f1;
+      --accent-c: #f59e0b;
       --grad: linear-gradient(90deg, var(--accent-a), var(--accent-b));
       --btn-active-grad: linear-gradient(90deg,#60a5fa,#a78bfa);
-      --shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
+      --shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.04);
+      --shadow-medium: 0 28px 60px rgba(15, 23, 42, 0.06);
       --radius: 16px;
       --max: 1100px;
     }
@@ -54,29 +55,28 @@
 
     .container{width:min(var(--max),calc(100% - 2rem));margin:0 auto}
 
-    .site-header{position:sticky;top:0;z-index:20;backdrop-filter:blur(8px);background:rgba(255,255,255,0.8);border-bottom:1px solid var(--line)}
+    .site-header{position:sticky;top:0;z-index:20;backdrop-filter:blur(8px);background:rgba(255,255,255,0.88);border-bottom:1px solid var(--line)}
 
-    .nav{display:flex;align-items:center;justify-content:space-between;min-height:70px;gap:1rem}
+    .nav{display:flex;align-items:center;justify-content:space-between;min-height:72px;gap:1rem;padding:0 0.25rem}
 
-    .brand{font-family:"Space Grotesk",sans-serif;font-size:1rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);font-weight:700}
+    .brand{font-family:"Space Grotesk",sans-serif;font-size:.94rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);font-weight:600}
 
     .nav-links{display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap}
 
     .nav-links a{color:var(--ink-soft);font-size:.92rem;transition:color .18s ease}
     .nav-links a:hover{color:var(--accent-b)}
 
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:46px;padding:.6rem 1rem;border-radius:12px;border:1px solid transparent;font-weight:700;cursor:pointer;position:relative;overflow:hidden}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:46px;padding:.6rem 1rem;border-radius:12px;border:1px solid transparent;font-weight:700;cursor:pointer;position:relative;overflow:hidden;transition:transform .32s cubic-bezier(.2,.8,.2,1),box-shadow .32s cubic-bezier(.2,.8,.2,1)}
     .btn:focus{outline:2px solid rgba(99,102,241,0.18);outline-offset:3px}
 
     .cta{background:var(--grad);color:#fff}
-    .cta:hover{filter:brightness(.98);transform:translateY(-2px)}
+    .cta:hover{transform:translateY(-5px) scale(1.03);box-shadow:0 20px 50px rgba(99,102,241,0.20)}
 
     .ghost{background:transparent;border:1px solid var(--line-strong);color:var(--ink)}
+    .ghost:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(15,23,42,0.06)}
 
-    /* Button active styles (toggled after click) */
     .btn.active{background:var(--btn-active-grad);color:#081018}
 
-    /* Bubble effect */
     .bubble{
       position:absolute;border-radius:50%;transform:translate(-50%, -50%);pointer-events:none;opacity:0.9;mix-blend-mode:multiply;
       animation:bubble-pop 700ms cubic-bezier(.2,.9,.2,1);
@@ -88,25 +88,25 @@
       100%{transform:translate(-50%,-50%) scale(1.6);opacity:0}
     }
 
-    /* allow nav links to host bubbles without layout shift */
     .bubble-target{position:relative;display:inline-flex;padding:.25rem .45rem;border-radius:8px}
 
-    .hero{padding:4.5rem 0 2rem}
-    .hero-shell{display:grid;grid-template-columns:1.3fr .7fr;align-items:center;gap:2.2rem}
+    .hero{padding:4rem 0 2rem}
+    .hero-shell{display:grid;grid-template-columns:1.3fr .7fr;align-items:center;gap:2.4rem}
 
     .eyebrow{display:inline-block;letter-spacing:.12em;font-size:.76rem;color:var(--accent-a);text-transform:uppercase;margin-bottom:1rem;font-weight:600}
-    h1{margin:0;font-family:"Space Grotesk",sans-serif;font-size:clamp(2.2rem,6vw,4.4rem);line-height:1.02;letter-spacing:-.02em;font-weight:700}
+    h1{margin:0;font-family:"Space Grotesk",sans-serif;font-size:clamp(2.1rem,6vw,4rem);line-height:1.02;letter-spacing:-.02em;font-weight:700}
     .lead{margin-top:1rem;max-width:58ch;color:var(--ink-soft);font-size:1.02rem}
+
+    .section{padding:3rem 0 1rem}
+    .section + .section{margin-top:0.6rem}
 
     .hero-actions{display:flex;flex-wrap:wrap;gap:1rem;margin-top:1.4rem}
 
     .hero-meta{display:flex;flex-wrap:wrap;gap:1rem 2rem;margin-top:1.6rem;padding-top:1.1rem;border-top:1px solid var(--line);color:var(--ink-soft);font-size:.92rem}
     .hero-meta strong{color:var(--ink);display:block;font-weight:700;margin-bottom:.2rem}
 
-    /* profile card + avatar enhancements */
-    .profile-card{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:1rem;box-shadow:var(--shadow);overflow:visible;transition:transform .35s ease, box-shadow .35s ease}
+    .profile-card{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:1.2rem;box-shadow:var(--shadow-medium);overflow:visible;transition:transform .35s ease, box-shadow .35s ease}
 
-    /* much bigger, richer glow & premium outer ring */
     .profile-card::before{
       content: "";
       position: absolute;
@@ -152,22 +152,21 @@
       pointer-events: none;
     }
 
-    .avatar{position:relative;z-index:2;width:min(100%,420px);aspect-ratio:1;border-radius:50%;margin:0 auto;background:linear-gradient(180deg,#ffffff,#f8fbff);border:8px solid rgba(255,255,255,0.99);display:grid;place-items:center;overflow:hidden;box-shadow:0 40px 90px rgba(99,102,241,0.14);transition:transform .35s ease, box-shadow .35s ease}
+    .avatar{position:relative;z-index:2;width:min(100%,420px);aspect-ratio:1;border-radius:50%;margin:0 auto;background:linear-gradient(180deg,#ffffff,#f8fbff);border:8px solid rgba(255,255,255,0.99);display:grid;place-items:center;overflow:hidden;box-shadow:0 28px 60px rgba(99,102,241,0.10);transition:transform .35s ease, box-shadow .35s ease}
 
     .avatar img{width:125%;height:125%;object-fit:cover;object-position:center -18%;border-radius:50%;z-index:2;transform:scale(1.08);filter:brightness(0.94) contrast(0.96) saturate(0.96);transition:transform .45s ease, filter .45s ease}
     .badge{position:absolute;right:12px;bottom:12px;background:#fff;border:1px solid var(--line);color:var(--ink-soft);border-radius:999px;padding:.35rem .7rem;font-size:.82rem;z-index:3}
 
-    .profile-card:hover{transform:translateY(-12px);box-shadow:0 60px 120px rgba(15,23,42,0.14)}
-    .profile-card:hover .avatar{transform:translateY(-8px) scale(1.02);box-shadow:0 50px 110px rgba(99,102,241,0.20)}
+    .profile-card:hover{transform:translateY(-12px);box-shadow:0 60px 120px rgba(15,23,42,0.12)}
+    .profile-card:hover .avatar{transform:translateY(-8px) scale(1.02);box-shadow:0 50px 110px rgba(99,102,241,0.18)}
     .profile-card:hover .avatar img{transform:scale(1.16);filter:brightness(0.98) contrast(1) saturate(1.02)}
 
-    .section{padding:2rem 0 .5rem}
     .section-head{display:flex;align-items:center;gap:1rem;margin-bottom:1.2rem}
     .section-num{color:var(--ink-muted);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700}
     .section-title{display:flex;align-items:center;margin:0;color:var(--ink);font-size:clamp(1.2rem,3vw,1.6rem);letter-spacing:-.02em;flex:1}
     .section-line{flex:1;height:1px;background:linear-gradient(90deg,rgba(99,102,241,.18),rgba(99,102,241,.03))}
 
-    .job,.skill-group{background:#fff;border:1px solid var(--line);border-radius:12px;padding:1rem;box-shadow:var(--shadow)}
+    .job,.skill-group{background:#fff;border:1px solid var(--line);border-radius:12px;padding:1rem;box-shadow:var(--shadow-soft)}
     .job-head{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;align-items:center;margin-bottom:.5rem}
     .job-title{font-family:"Space Grotesk",sans-serif;font-size:1.02rem;font-weight:700}
     .job-date{color:var(--ink-muted);font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;font-weight:700}
@@ -220,9 +219,7 @@
 
           <div class="hero-actions">
             <a class="btn cta" href="https://wa.me/639494022044?text=Hello%20Kurt%2C%20I%27m%20interested%20in%20working%20with%20you." target="_blank" rel="noopener">Get in touch</a>
-            <!-- Replace the Calendly URL below with your own calendly link -->
             <a class="btn ghost" href="https://calendly.com/yourname" target="_blank" rel="noopener">Book a call</a>
-            <!-- Add your PDF to assets/Kurt-Andrei-Mian-Resume.pdf -->
             <a class="btn ghost" href="assets/Kurt-Andrei-Mian-Resume.pdf" download>Download resume</a>
           </div>
 
@@ -416,7 +413,6 @@
   </footer>
 
   <script>
-    // Button bubble and color toggle animation
     function createBubble(button, x, y, color){
       const rect = button.getBoundingClientRect();
       const bubble = document.createElement('span');
