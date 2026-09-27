@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-label="Portrait placeholder for Kurt Andrei Mian">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#111111"/>
+      <stop offset="100%" stop-color="#2a201b"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#d5b77d"/>
+      <stop offset="100%" stop-color="#8f6d3d"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)"/>
+  <circle cx="400" cy="430" r="250" fill="#1d1d1d" opacity="0.45"/>
+  <circle cx="395" cy="370" r="155" fill="#f0d8a8" opacity="0.18"/>
+  <path d="M245 655c18-132 82-220 162-220s146 88 163 220H245Z" fill="#1a1a1a"/>
+  <path d="M315 280c0-88 42-145 87-145s83 57 83 145v44c0 58-26 97-82 97s-88-39-88-97v-44Z" fill="#1e1e1e"/>
+  <path d="M325 445c16-47 65-76 122-76 69 0 118 39 135 94l29 145H287l38-163Z" fill="#2a2a2a" opacity="0.9"/>
+  <circle cx="360" cy="322" r="18" fill="#061013" opacity="0.8"/>
+  <circle cx="468" cy="322" r="18" fill="#061013" opacity="0.8"/>
+  <path d="M328 410c33 32 64 48 99 48 44 0 73-18 104-52" fill="none" stroke="#d9b87d" stroke-width="10" stroke-linecap="round"/>
+  <path d="M295 216c6-56 39-95 88-112 17-6 39-9 59-9 29 0 62 7 88 20 47 25 75 74 81 129-54-39-117-49-180-36-31 7-57 17-80 34l-56-26Z" fill="#050505" opacity="0.9"/>
+  <rect x="225" y="152" width="350" height="60" rx="16" fill="url(#panel)" opacity="0.25"/>
+  <text x="400" y="920" text-anchor="middle" fill="#f0d8a8" font-size="52" font-family="Georgia, serif" letter-spacing="8">KURT ANDREI</text>
+</svg>
